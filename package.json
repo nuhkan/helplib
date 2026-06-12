@@ -1,9 +1,9 @@
 {
   "name": "helplib",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "Boost your project development with this helpful toolkit",
-  "main": "src/index.js",
-  "types": "src/index.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "homepage": "https://github.com/nuhkan/helplib#readme",
   "repository": {
     "type": "git",
@@ -13,7 +13,7 @@
     "url": "https://github.com/nuhkan/helplib/issues"
   },
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
     "build": "tsc",
