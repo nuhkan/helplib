@@ -4,13 +4,13 @@
   "description": "Boost your project development with this helpful toolkit",
   "main": "src/index.js",
   "types": "src/index.d.ts",
-  "homepage": "https://github.com/nuhh0/helplib#readme",
+  "homepage": "https://github.com/nuhkan/helplib#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nuhh0/helplib.git"
+    "url": "https://github.com/nuhkan/helplib.git"
   },
   "bugs": {
-    "url": "https://github.com/nuhh0/helplib/issues"
+    "url": "https://github.com/nuhkan/helplib/issues"
   },
   "files": [
     "src"
@@ -27,7 +27,7 @@
     "helpers",
     "utilities"
   ],
-  "author": "nuhh0 <nuhkan@outlook.com>",
+  "author": "Nuh KAN <nuh@nuhkan.me>",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.4.0",
