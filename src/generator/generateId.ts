@@ -5,19 +5,19 @@
  * @returns {string} - The generated ID.
  */
 export function generateId(length: number = 11): string {
-    const maxLength = 15; // Maximum ID length
-    const minLength = 6; // Minimum ID length
+    const maxLength = 15;
+    const minLength = 6;
 
     if (length < minLength) {
-        length = minLength; // If the specified length is less than 6, create a 6-character ID
+        length = minLength;
     }
     if (length > maxLength) {
-        length = maxLength; // If the specified length is greater than 15, set the length to 15
+        length = maxLength;
     }
 
     const randomString = Math.floor(Math.random() * length);
-    const timestamp = (performance.now() + Date.now()).toString().replace('.', ''); // Generate timestamp
-    const id = `${timestamp}${randomString}`.slice(-length); // Concatenate timestamp and random number and slice to the specified length
+    const timestamp = (performance.now() + Date.now()).toString().replace('.', '');
+    const id = `${timestamp}${randomString}`.slice(-length);
 
     return id;
 }

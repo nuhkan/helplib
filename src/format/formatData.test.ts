@@ -9,7 +9,6 @@ describe('formatData Function', () => {
     });
 
     it('should replace all occurrences of a placeholder globally', () => {
-        // Senin kodundaki "g" flag'i (global) çalışıyor mu?
         const data = { id: '123' };
         const text = 'ID: {id}, Reference: {id}';
         expect(formatData(data, text)).toBe('ID: 123, Reference: 123');
@@ -22,7 +21,6 @@ describe('formatData Function', () => {
     });
 
     it('should not throw if a placeholder exists in text but not in data', () => {
-        // Data içinde olmayan ama metinde olan placeholder (kodun mevcut haliyle olduğu gibi bırakmalı)
         const data = { name: 'Nuhkan' };
         const text = 'Hello {name}, {missing}!';
         expect(formatData(data, text)).toBe('Hello Nuhkan, {missing}!');
