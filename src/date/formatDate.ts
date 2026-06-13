@@ -17,8 +17,11 @@ export function formatDate(date: Date = new Date(), format: string = 'M/d/y H:m:
     };
 
     return format.replace(/(M+|d+|H+|m+|s+|f+|y+)/g, (match: string) => {
-        const value = map[match[0]];
-        const padding = match.length > 1 ? '0'.repeat(match.length - 1) : '';
-        return typeof value === 'number' ? padding + value.toString() : String(value);
+        const valueStr = String(map[match[0]]);
+
+        // Match uzunluğu kadar basamaklı olması için başını '0' ile dolduruyoruz.
+        // Örn: match 'MM' (2 hane) ise ve değer '11' ise, padStart hiçbir şey yapmaz ('11' döner).
+        // Eğer değer '5' ise, padStart başa sıfır koyar ('05' döner).
+        return match.length > 1 ? valueStr.padStart(match.length, '0') : valueStr;
     });
 }

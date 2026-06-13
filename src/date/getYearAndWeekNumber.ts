@@ -5,14 +5,13 @@
  * @returns {{ year: number, weekNumber: number }} An object containing the year and week number for the specified date object.
  */
 export function getYearAndWeekNumber(date: Date = new Date()): { year: number; weekNumber: number } {
-    // Get the year and the number of days since January 1st of that year
     const year = date.getFullYear();
     const startOfYear = new Date(year, 0, 1);
     const daysSinceStart = Math.floor((date.getTime() - startOfYear.getTime()) / (1000 * 60 * 60 * 24));
-    
-    // Calculate the week number based on the number of days since the beginning of the year
-    const weekNumber = Math.floor((daysSinceStart + startOfYear.getDay() - 1) / 7) + 1;
-    
-    // Return an object with the year and week number
+
+    const startDay = startOfYear.getDay() === 0 ? 7 : startOfYear.getDay();
+
+    const weekNumber = Math.floor((daysSinceStart + startDay - 1) / 7) + 1;
+
     return { year, weekNumber };
 }
