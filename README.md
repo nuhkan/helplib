@@ -149,3 +149,9 @@ console.log(generatePassword(7)); // fUYzWVZ0 => length = 8;
 ## License
 
 `helplib` is released under the [MIT License](https://opensource.org/licenses/MIT).
+
+## Contributing
+Please read our [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
+## Code of Conduct
+We follow the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
